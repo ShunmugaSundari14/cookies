@@ -1,0 +1,75 @@
+.shop-page {
+  padding: 4rem 2rem;
+  background-color: #fdfdfd;
+  font-family: 'Segoe UI', sans-serif;
+}
+
+.shop-header {
+  text-align: center;
+  margin-bottom: 3rem;
+}
+
+.shop-header h1 {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+}
+
+.shop-header p {
+  font-size: 1.1rem;
+  color: #777;
+}
+
+.product-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 2rem;
+}
+
+.product-card {
+  background: #fff;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.06);
+  transition: transform 0.3s ease;
+}
+
+.product-card:hover {
+  transform: translateY(-8px);
+}
+
+.product-card img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.product-info {
+  padding: 1rem;
+  text-align: center;
+}
+
+.product-info h3 {
+  font-size: 1.1rem;
+  margin-bottom: 0.5rem;
+}
+
+.product-info .price {
+  color: #444;
+  font-weight: bold;
+}
+
+.order-now-button 
+{
+  background-color: #A3876A;; 
+  color: whitesmoke;
+  padding: 5px 5px;
+  border: none;
+  border-radius: 20px;
+  cursor: pointer;
+  font-size: 16px;
+  font-weight: bold;
+  transition: background-color 0.3s ease;
+  margin-top: 5px;
+  width: 50%; 
+  box-sizing: border-box; 
+}

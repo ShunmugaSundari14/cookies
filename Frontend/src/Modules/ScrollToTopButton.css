@@ -1,0 +1,29 @@
+/* src/components/ScrollToTopButton.css */
+.scroll-to-top-button {
+    position: fixed;
+    bottom: 20px; /* 20px from the bottom */
+    right: 30px; /* 30px from the right */
+    z-index: 1000; /* Ensure it's above other content */
+    background-color: #833517; /* Example: Bootstrap primary blue */
+    color: white;
+    border: none;
+    border-radius: 50%; /* Makes it a circle */
+    width: 50px; /* Fixed width */
+    height: 50px; /* Fixed height */
+    font-size: 24px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    transition: background-color 0.3s, transform 0.2s ease-in-out;
+}
+
+.scroll-to-top-button:hover {
+    background-color: #833517; /* Darker blue on hover */
+    transform: scale(1.05); /* Slightly enlarge on hover */
+}
+
+/* Optional: Add a fade-in/fade-out transition for the button itself if you prefer */
+/* This would be handled by the 'isVisible' state and CSS transitions on 'opacity' */
+/* For simplicity, we are just using 'display' which is immediate */

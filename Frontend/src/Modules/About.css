@@ -1,0 +1,152 @@
+.about-page {
+  font-family: 'Segoe UI', sans-serif;
+  padding: 4rem 2rem;
+  background-color: #f9f9f9;
+}
+
+.about-hero {
+  text-align: center;
+  padding-bottom: 3rem;
+}
+
+.about-hero h1 {
+  font-size: 3rem;
+  margin-bottom: 1rem;
+}
+
+.about-hero p {
+  font-size: 1.2rem;
+  color: #833517;;
+}
+
+.about-section {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 4rem;
+  flex-wrap: wrap;
+}
+
+.about-section.reverse {
+  flex-direction: row-reverse;
+}
+
+.about-image img {
+  width: 100%;
+  max-width: 500px;
+  border-radius: 12px;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+}
+
+.about-text {
+  flex: 1;
+  padding: 2rem;
+  max-width: 600px;
+}
+
+.about-text h2 {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+}
+
+.about-text p {
+  font-size: 1rem;
+  color: #444;
+  line-height: 1.6;
+}
+
+.about-mission {
+  text-align: center;
+  margin-top: 9rem;
+  background: #fff;
+  padding: 10rem 12rem;
+  border-radius: 20px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.05);
+}
+
+.about-mission h2 {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+}
+
+.about-mission p {
+  font-size: 1.1rem;
+  color: #555;
+}
+
+
+ .shop-page {
+  padding: 4rem 2rem;
+  background-color: #000000;
+  font-family: 'Segoe UI', sans-serif;
+}
+
+.shop-header {
+  text-align: center;
+  margin-bottom: 3rem;
+}
+
+.shop-header h1 {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+}
+
+.shop-header p {
+  font-size: 1.1rem;
+  color: #777;
+}
+
+.product-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 2rem;
+}
+
+.product-card {
+  background: #000000;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.06);
+  transition: transform 0.3s ease;
+}
+
+.product-card:hover {
+  transform: translateY(-8px);
+}
+
+.product-card img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.product-info {
+  padding: 1rem;
+  text-align: center;
+}
+
+.product-info h3 {
+  font-size: 1.1rem;
+  margin-bottom: 0.5rem;
+}
+
+.product-info .price {
+  color: #444;
+  font-weight: bold;
+}
+
+.order-now-button 
+{
+  background-color: #A3876A;; 
+  color: whitesmoke;
+  padding: 5px 5px;
+  border: none;
+  border-radius: 20px;
+  cursor: pointer;
+  font-size: 16px;
+  font-weight: bold;
+  transition: background-color 0.3s ease;
+  margin-top: 5px;
+  width: 50%; 
+  box-sizing: border-box; 
+}

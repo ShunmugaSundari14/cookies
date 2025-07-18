@@ -1,0 +1,64 @@
+.location-selector-container {
+  /* font-family: sans-serif; */
+  /* padding: 20px; */
+  text-align: center;
+  /* background-color: #8f8f8f; */
+  background-color:  #833517;
+  background-image: url("../assets/bgtop1.jpg");
+  /* box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);  */
+  width: 100px; /* Example: 50% of the viewport width */
+  height: 50.5vmin; 
+  text-align: center;
+  font: weight 1000px;
+  font-family: 'Times New Roman', Times, serif;
+  color: #fff;
+  padding: 30px;
+  border: none;
+  border-radius: 1px;
+  cursor: pointer;
+  font-size: 25px;
+  font-weight: bold;
+  transition: background-color 0.3s ease;
+  margin-top: 4px;
+  width: 100%; 
+  box-sizing: border-box;
+}
+
+.dropdown-wrapper {
+  position: relative;
+  display: inline-block;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  overflow: -moz-hidden-unscrollable; /* Hides default arrow */
+  background-color: #fff;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.location-dropdown {
+  width: 250px; /* Adjust as needed */
+  padding: 10px 30px 10px 10px;
+  border: none;
+  background-color: transparent;
+  -webkit-appearance: none; /* Remove default arrow for WebKit browsers */
+  -moz-appearance: none;    /* Remove default arrow for Mozilla browsers */
+  appearance: none;         /* Remove default arrow for other browsers */
+  cursor: pointer;
+  font-size: 16px;
+  outline: none;
+}
+
+.dropdown-arrow {
+  position: absolute;
+  right: 10px;
+  top: 50%;
+  transform: translateY(-50%);
+  pointer-events: none; /* Allows clicks to pass through to the select */
+  color: black ;
+}
+
+.selected-info {
+  margin-top: 20px;
+  font-size: 18px;
+  color: #fff;
+}
+ 

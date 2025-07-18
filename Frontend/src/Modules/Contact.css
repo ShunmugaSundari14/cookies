@@ -1,0 +1,97 @@
+.contact-page {
+  padding: 50px;
+  max-width: 700px;
+  margin: 0 auto;
+  font-family: 'Segoe UI', sans-serif;
+  color: #222;
+  background-color: #fefefe;
+  width: 100%;
+}
+
+.contact-header {
+  text-align: center;
+  margin-bottom: 3rem;
+}
+
+.contact-header h1 {
+  font-size: 3rem;
+  margin-bottom: 1rem;
+}
+
+.contact-header p {
+  font-size: 1.2rem;
+  color: #555;
+}
+
+.contact-form {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+}
+
+.Contact.image-wrapper {
+  background-image: url("../assets/Cookies1.jpg");
+  background-repeat: no-repeat;
+  background-position: center; /* Center the background image */
+  background-size: cover; /* This is crucial for filling the space without distortion */
+  width: 50vw; /* Example: 50% of the viewport width */
+  height: 50vw; /* This makes the height equal to the width */
+  max-width: 500px;
+  max-height: 500px; /* Also add a max-height to match max-width */
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15); /* Subtle shadow for the image */
+  border-radius: 8px; /* Slightly rounded corners for the image wrapper */
+  overflow: hidden; /* Ensures image respects border-radius if content were inside */
+}
+
+.form-group label {
+  font-weight: 500;
+  margin-bottom: 0.5rem;
+  color: #333;
+}
+
+.form-group input,
+.form-group textarea {
+  padding: 0.8rem 1rem;
+  font-size: 1rem;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  background: #fff;
+  transition: border-color 0.3s ease;
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+  border-color: #000;
+  outline: none;
+}
+
+.submit-button {
+  padding: 1rem 2rem;
+  background-color: #000;
+  color: #fff;
+  font-size: 1rem;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.submit-button:hover {
+  background-color: #833517;;
+}
+
+.contact-footer {
+  text-align: center;
+  margin-top: 2rem;
+  font-size: 1rem;
+}
+
+.contact-footer a {
+  color: #000;
+  text-decoration: underline;
+}

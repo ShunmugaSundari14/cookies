@@ -1,0 +1,239 @@
+Home.css 
+
+.bakery-hero-section {
+  /* Set your full-background image here.
+     Adjust the path if your image is not directly in public/images/ */
+  background: url('/images/bakery-full-hero.jpg') no-repeat center center/cover;
+  /*
+    - no-repeat: Prevents the image from repeating if it's smaller than the container.
+    - center center: Centers the image horizontally and vertically.
+    - /cover: This is the crucial part. It scales the background image to
+                be as large as possible to cover the entire container,
+                /* cropping the image if necessary to fit. */
+  
+
+  color: #ffffff;  
+  height: 100vh;  
+  display: flex;
+  align-items: center;  
+  justify-content: flex-start; /* Align text content to the left */
+  padding-left: 10%; /* Spacing from the left edge for the text */
+  position: relative; /* Needed for overlay and z-indexing if you use them */
+  overflow: hidden; /* Ensures the image doesn't overflow its container */
+  text-align: left; /* Default text alignment */
+}
+
+/* Optional: Overlay for better text readability on busy images */
+.bakery-hero-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.4); /* Dark semi-transparent overlay */
+  z-index: 1; /* Place behind content but above background image */
+}
+
+.bakery-hero-content {
+  position: relative; /* Position relative to the hero section, above the overlay */
+  z-index: 2; /* Ensures content is on top of the overlay */
+  max-width: 650px; /* Limit content width for better readability */
+  padding: 20px; /* Internal padding */
+  box-sizing: border-box; /* Include padding in width calculation */
+}
+
+.bakery-hero-tagline {
+  font-family: 'Playfair Display', serif;
+  font-size: 1.1em;
+  margin-bottom: 10px;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: #ffdda1; /* A light golden color for the tagline */
+  font-weight: 400;
+}
+
+.bakery-hero-title {
+  font-family: 'Playfair Display', serif;
+  font-size: 4.8em;
+  margin-bottom: 25px;
+  font-weight: 700;
+  line-height: 1.1;
+  text-shadow: 3px 3px 6px rgba(0, 0, 0, 0.7); /* Stronger shadow for title */
+}
+
+.bakery-hero-description {
+  font-family: 'Roboto', sans-serif;
+  font-size: 1.3em;
+  margin-bottom: 40px;
+  line-height: 1.6;
+  font-weight: 300;
+  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5); /* Subtle shadow for description */
+}
+
+.bakery-hero-button {
+  background-color: #e6a74e;
+  color: #ffffff;
+  padding: 18px 35px;
+  border: none;
+  border-radius: 5px;
+  font-size: 1.2em;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+.bakery-hero-button:hover {
+  background-color: #d8963d;
+  transform: translateY(-2px);
+}
+
+/* --- Responsive Adjustments (important for full-screen images) --- */
+
+@media (max-width: 1024px) {
+  .bakery-hero-title {
+    font-size: 4em;
+  }
+  .bakery-hero-description {
+    font-size: 1.1em;
+  }
+  .bakery-hero-section {
+    padding-left: 8%;
+  }
+}
+
+@media (max-width: 768px) {
+  .bakery-hero-title {
+    font-size: 3em;
+  }
+  .bakery-hero-description {
+    font-size: 1em;
+  }
+  .bakery-hero-button {
+    padding: 15px 30px;
+    font-size: 1.1em;
+  }
+  .bakery-hero-section {
+    padding-left: 5%;
+    height: 80vh; /* Adjust height for smaller screens */
+    text-align: center; /* Center text on tablet/mobile */
+    justify-content: center; /* Center content horizontally */
+  }
+  .bakery-hero-content {
+    max-width: 90%; /* Wider content area on smaller screens */
+    padding: 15px;
+  }
+}
+
+@media (max-width: 480px) {
+  .bakery-hero-title {
+    font-size: 2.5em;
+    margin-bottom: 15px;
+  }
+  .bakery-hero-description {
+    font-size: 0.9em;
+    margin-bottom: 25px;
+  }
+  .bakery-hero-button {
+    padding: 12px 25px;
+    font-size: 1em;
+  }
+  .bakery-hero-section {
+    height: 70vh; /* Further adjust height for mobile */
+  }
+}
+
+/* CookieSection.css */
+
+.cookie-section-container {
+  display: flex;
+  flex-direction: column; /* Stack items vertically: text then image */
+  align-items: center; /* Center content horizontally */
+  padding: 60px 20px; /* Add some padding around the section */
+  background-color: #fcf8f3; /* A light, warm background color */
+  text-align: center; /* Center text within its container */
+}
+
+.cookie-text-content {
+   background-image: url("../assets/bgtop1.jpg");
+  background-repeat: no-repeat;
+  /* background: #fff; */
+  text-align: center;
+  -webkit-text-fill-color: #ffffff;
+  /* color: #ffffff; */
+  /* text-shadow: #ffffff; */
+  background-position: center; /* Center the background image */
+  background-size: cover; /* This is crucial for filling the space without distortion */
+  width: 100%; /* Example: 50% of the viewport width */
+  height: 150%; /* This makes the height equal to the width */
+  max-width: 500px;
+  max-height: 500px; /* Also add a max-height to match max-width */
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15); /* Subtle shadow for the image */
+  border-radius: 8px; /* Slightly rounded corners for the image wrapper */
+  overflow: hidden; /* Ensures image respects border-radius if content were inside */
+  max-width: 1000px; /* Limit width of the text for readability */
+  margin-bottom: 40px; /* Space between text and image */
+}
+
+.cookie-section-title {
+  font-family: 'Playfair Display', serif; /* Consistent font style */
+  font-size: 3em;
+  color: #333; /* Darker text color */
+  margin-bottom: 20px;
+  font-weight: 700;
+}
+
+.cookie-section-description {
+  font-family: 'Roboto', sans-serif;
+  font-size: 1.2em;
+  color: #666; /* Slightly lighter text color */
+  line-height: 1.6;
+}
+
+.cookie-image-wrapper {
+  background-image: url("../assets/Cookies1.jpg");
+  background-repeat: no-repeat;
+  background-position: center; /* Center the background image */
+  background-size: cover; /* This is crucial for filling the space without distortion */
+  width: 50vw; /* Example: 50% of the viewport width */
+  height: 50vw; /* This makes the height equal to the width */
+  max-width: 500px;
+  max-height: 500px; /* Also add a max-height to match max-width */
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15); /* Subtle shadow for the image */
+  border-radius: 8px; /* Slightly rounded corners for the image wrapper */
+  overflow: hidden; /* Ensures image respects border-radius if content were inside */
+}
+
+.cookie-image {
+  width: 100%; /* Make the image fill its wrapper */
+  height: auto; /* Maintain aspect ratio */
+  display: block; /* Removes extra space below the image */
+}
+
+/* --- Responsive Adjustments --- */
+@media (max-width: 768px) {
+  .cookie-section-title {
+    font-size: 2.5em;
+  }
+  .cookie-section-description {
+    font-size: 1em;
+  }
+  .cookie-text-content {
+    margin-bottom: 30px;
+  }
+  .cookie-image-wrapper {
+    max-width: 90%; /* Allow image to take more width on smaller screens */
+  }
+}
+
+@media (max-width: 480px) {
+  .cookie-section-title {
+    font-size: 2em;
+  }
+  .cookie-section-description {
+    font-size: 0.9em;
+  }
+  .cookie-section-container {
+    padding: 40px 15px;
+  }
+}
