@@ -1,24 +1,26 @@
- .header {
+.header {
   background: #833517;
   box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.1);
   padding: 1rem;
-  
+
   top: 0;
-  left:0;
+  left: 0;
   right: 0;
-  
-  align-items: flex-start;
+
+  align-items: center;
   justify-content: space-between;
   z-index: 1000;
+  display: flex;
 }
 
 .container {
   max-width: 1500px;
-  margin: auto; 
+  margin: auto;
   padding: 0 2rem;
   display: flex;
   justify-content: space-between;
-  align-items: left;
+  align-items: center;
+  flex: 1;
 }
 
 .logo {
@@ -28,11 +30,33 @@
   margin-left: 0;
 }
 
+.logo h1 {
+  margin: 0;
+  line-height: 1.2;
+}
+
+.welcome-text {
+  display: block;
+  font-size: 1rem;
+  font-weight: 400;
+  color: #f8d7a7;
+  margin-bottom: 0.2rem;
+}
+
+.bakery-name {
+    display: block;
+  font-size: 1.8rem;
+  font-weight: 700;
+  color: #fff;
+  letter-spacing: 1px;
+  }
+
 .nav {
   display: flex;
   gap: 2rem;
+  align-items: center;
+  margin-bottom: auto;
 }
-
 .nav a {
   text-decoration: none;
   color: #fff;
@@ -43,11 +67,62 @@
 .nav a:hover {
   color: #0088cc;
 }
-
 .menu-icon {
   display: none;
   font-size: 1.8rem;
   cursor: pointer;
+}
+.profile-wrapper {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.profile-avatar {
+  padding: 0;
+  background-color: #f8b400;
+  color: #fff;
+  border-radius: 50%;
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 1.2rem;
+  width: 44px;
+  height: 44px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: transform 0.3s ease;
+  box-sizing: border-box;
+}
+
+.profile-avatar:hover {
+  transform: scale(1.1);
+  background-color: #e09b00;
+}
+
+.logout-btn {
+  padding: 8px 12px;
+  background-color: #e74c3c;
+  color: #fff;
+  border: none;
+  border-radius: 6px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.logout-btn:hover {
+  background-color: #c0392b;
+}
+
+.register-link {
+  padding: 8px 15px;
+  background-color: #4a90e2;
+  color: #fff;
+  border-radius: 4px;
+  text-decoration: none;
+  font-weight: bold;
+  display: inline-block;
 }
 
 /* Responsive */
