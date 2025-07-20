@@ -1,7 +1,7 @@
-// src/RegistrationPage.js
-
 import React, { useState } from 'react';
-import './RegistrationPage.css'; // We'll create this CSS file next
+import './RegistrationPage.css';
+import toast from "react-hot-toast" 
+import axios from "axios"
 
 function RegistrationPage() {
   
@@ -11,26 +11,22 @@ function RegistrationPage() {
   const [confirmPassword, setConfirmPassword] = useState('');
   const [message, setMessage] = useState('');
 
-  const handleSubmit = (e) => {
-    e.preventDefault();
-    setMessage(''); // Clear previous messages
-
-    if (password !== confirmPassword) {
-      setMessage('Passwords do not match!');
-      return;
-    }
-
-    // Here you would typically send this data to a backend server
-    // For demonstration, we'll just log it.
-    console.log({
-      username,
+  const handleSubmit = async (e) => {
+   try {
+    const res = await axios.post(`localhost:8000/api/register.php`, {
+      name: username,
       email,
-      password,
-    });
+      password
+    })
 
-    setMessage('Registration successful! (Demo: Check console for data)');
-    // You might want to redirect the user to a dashboard or login page after successful registration
-    // navigate('/dashboard'); or navigate('/login');
+    if (res.data.status === 200) {
+      toast.success("Registered successfully")
+      localStorage.setItem("user", JSON.stringify(res.data))
+    }
+   } catch (error) {
+    console.error(error);
+    toast.error("Failed to reegister")
+   }
   };
 
   return (
@@ -79,7 +75,9 @@ function RegistrationPage() {
           />
         </div>
         <button type="submit" className="register-button">Register</button>
-        {message && <p className="message">{message}</p>}
+        <p>
+          Do you already have an account? <a href="/login">Login here</a>
+        </p>
       </form>
     </div>
     </section>
